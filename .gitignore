@@ -12,3 +12,6 @@ __pycache__
 *.pydevproject
 *.prefs
 
+private_files/kakao_settings.txt
+private_files/secret_key.txt
+private_files/wining_email_account.txt
