@@ -330,8 +330,12 @@ class SearchReceiveCodeView(View):
 
 class SearchReceiveCodeApi(APIView):
     def get(self, request, **kwargs):
-        receive_code = kwargs.get("code", None).replace(" ", "")
-
+        receive_code = kwargs.get("code", None)
+      
+        if receive_code is not None:
+            receive_code = receive_code.replace(" ", "")
+        else:
+            receive_code = "None"
         result = search_receive_code(
             receive_code=EncModule().encrypt_receive_code(receive_code)
         )
