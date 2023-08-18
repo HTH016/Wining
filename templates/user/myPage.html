@@ -14,7 +14,7 @@
 
 
     <body class="sb-nav-fixed">   
-		<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+		<nav>
 		
 	 <div class="border-start border-end bg-white" id="sidebar-wrapper" style="width:300px;">
          <div class="sidebar-heading border-bottom bg-light" align="center"><b>MyPage</b></div>
@@ -63,7 +63,7 @@
                        
                        
 
-                        <div class="row">
+                       <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">{{dto.user_point}} Point</div>
@@ -74,34 +74,11 @@
                                     </div>
                                 </div>
                             </div>
-                            
-							
-                            <div id="chargeForm" style="display:none;">
-								<form method="post" action="addPoint" name="addpoint">
-									<div class="container">
-										<div class="wrapper"> 
-											<div class="outer-card"> 
-												<div class="forms">
-													<input class="inputbutton" type="button" value="X" onclick="location='myPage'">
+                        
 
-													<div class="input-items"> 
-														<input id="chargePoint" name="point" type="number" placeholder="충전금액을 입력해주세요" size="19"> 
-													</div>
-													<div class="input-items"> 
-														<span id="currentPoint">보유 포인트 :<b> {{dto.user_point}}</b></span>
-													</div>
-												</div> 
-												<div class="input-buttons"> 
-													<input type="submit" id="charge" value="충전하기">
-												</div> 
-											</div> 
-										</div> 
-									</div>
-								</form>
-                            </div>
                             
                             
-                            
+ 
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
                                     <div class="card-body">주문내역 {{purchase_c}}</div>
@@ -111,6 +88,9 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                        
+                      
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
                                     <div class="card-body">나의 리뷰 {{review_c}}</div>
