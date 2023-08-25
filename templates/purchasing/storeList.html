@@ -41,41 +41,44 @@
       </div>
     </div>
   
-	<div class="container">
-	    <h4>매장 리스트업</h4>
-	    <div id="storeList">
-		  <div class="row-header row">
-		    <div class="col">Product.</div>
-		    <div class="col-1">Price.</div>
-		    <div class="col">Store.</div>
-		    <div class="col">Location.</div>
-		  </div>
-	      {% for store in store_list %}
+<div class="container">
+	<h4>매장 리스트업</h4>
+	<div id="storeList">
+		{%if store_list%}
+			<div class="row-header row">
+				<div class="col">Product.</div>
+				<div class="col-1">Price.</div>
+				<div class="col">Store.</div>
+				<div class="col">Location.</div>
+			</div>
+			{% for store in store_list %}
 			
-	      {% endfor %}
-	    </div>
-	    
-	    <div id="newList">
-	      <div v-for="data, index in responseData" :key="data.sell_id">
-	        <div class="row" @click="move([[data.sell_id]])" :id="[[data.sell_id]]">
-	          <div class="col">
-	            <input type="hidden" name="sellId" :value="[[data.sell_id]]" />
-	            <p>[[data.wine_name]]</p>
-	          </div>
-	          <div class="col-1">
-	            <p>[[data.sell_price]]</p>
-	          </div>
-	          <div class="col">
-	            <p>[[data.store_name]]</p>
-	          </div>
-	          <div class="col">
-	            <p>[[data.store_address]]</p>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	   
+			{% endfor %}
+		{%else%}
+			<p>판매 매장이 없습니다</p>
+		{%endif%}
 	</div>
+ 
+	<div id="newList">
+		<div v-for="data, index in responseData" :key="data.sell_id">
+		<div class="row" @click="move([[data.sell_id]])" :id="[[data.sell_id]]">
+			<div class="col">
+				<input type="hidden" name="sellId" :value="[[data.sell_id]]" />
+				<p>[[data.wine_name]]</p>
+			</div>
+			<div class="col-1">
+				<p>[[data.sell_price]]</p>
+			</div>
+			<div class="col">
+				<p>[[data.store_name]]</p>
+			</div>
+			<div class="col">
+				<p>[[data.store_address]]</p>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
 	
 </html>
 

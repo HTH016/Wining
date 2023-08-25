@@ -474,7 +474,7 @@ class MyPageView(View):
             )
             detail_v = (
                 WinDetailView.objects.filter(user_id=memid)
-                .order_by("-detail_view_time")[:6]
+                .order_by("-detail_view_time")[:12]
                 .select_related("wine")
             )
 
@@ -609,7 +609,7 @@ class PurchaseDetailView(View):
 
         for purchase in purchases:
             purchase_details = WinPurchaseDetail.objects.filter(purchase_id=purchase)
-
+            
             for purchase_detail in purchase_details:
                 wine_name = purchase_detail.sell.wine.wine_name
                 wine_id = purchase_detail.sell.wine.wine_id
@@ -634,10 +634,11 @@ class PurchaseDetailView(View):
                         "purchase_time": purchase_time,
                         "sell_id": sell_id,
                         "purchase_det_state": purchase_det_state,
+                        
                     }
                 )
-
-        context = {"dtos": dtos, "reviews": reviews, "pdto": pdto, "purchase_c" : purchase_c}
+            
+        context = {"dtos": dtos, "reviews": reviews, "pdto": pdto, "purchase_c" : purchase_c,}
 
         return HttpResponse(template.render(context, request))
 
