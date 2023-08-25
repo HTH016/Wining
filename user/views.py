@@ -634,7 +634,6 @@ class PurchaseDetailView(View):
                         "purchase_time": purchase_time,
                         "sell_id": sell_id,
                         "purchase_det_state": purchase_det_state,
-                        
                     }
                 )
             
