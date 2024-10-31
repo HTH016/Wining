@@ -1,4 +1,3 @@
-
 # Wining
 
 ### 개요
@@ -56,7 +55,15 @@
 주류는 배송이 법적으로 불가능하기 때문에 서비스에 등록한 판매자와 구매자가 수령코드를 대조할 수 있도록 구현했습니다.
 수령코드는 base64를 이용하여 인코딩, 디코딩을 하도록 구현했습니다.
 
-<img src="https://github.com/user-attachments/assets/843d4bd4-51f4-4f55-b839-b3c1947b8a32" height="250" alt="description"> <img src="https://github.com/user-attachments/assets/7aee1ab담</th>
+<img src="https://github.com/user-attachments/assets/843d4bd4-51f4-4f55-b839-b3c1947b8a32" height="250" alt="description"> <img src="https://github.com/user-attachments/assets/7aee1abf-32e5-4a7b-8794-97e4f94a719b" height="250" alt="description">
+
+***
+
+### 팀원 구성 및 역할
+<table>
+    <tr>
+        <th style="width: 30%;">팀원</th>
+        <th>역할 분담</th>
     </tr>
     <tr>
         <td>한태희</td>
@@ -79,6 +86,3 @@
         회원 기능, 마이페이지, 리뷰 구현, 와인 추천 모듈</td>
     </tr>
 </table>
-
-
-
